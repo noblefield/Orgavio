@@ -2,11 +2,11 @@ from .base import *
 
 DATABASES = {
     "default": {
-        "ENGINE": env("POSTGRES_DB_ENGINE"),
+        "ENGINE": "django_tenants.postgresql_backend",
         "NAME": env("POSTGRES_DB"),
         "USER": env("POSTGRES_USER"),
         "PASSWORD": env("POSTGRES_PASSWORD"),
-        "HOST": env("POSTGRES_HOST", default="db"),
+        "HOST": env("POSTGRES_HOST", default="localhost"),
         "PORT": env("POSTGRES_PORT", default="5432"),
     }
 }
